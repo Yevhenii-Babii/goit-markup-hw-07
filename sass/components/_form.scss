@@ -11,9 +11,12 @@ transition: border;
 transition-duration: 250ms;
 transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 &:focus {
-    border: 1px solid var(--accent-color);
+    border: 1px solid var(--accent-color); 
+    } &:focus + .icon-contact {
+        fill: var(--accent-color);
+    }
 }
-}
+
 
 
 .form-name {
@@ -71,17 +74,20 @@ resize: none;
 &:focus {
     border: 1px solid var(--accent-color);
     }
+
+    &::placeholder {
+        color: rgba(117, 117, 117, 0.5);
+        font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: calc(14/12);
+    letter-spacing: 0.01em;
+    }
+
 }
 
-.form-comment::placeholder {
-    color: rgba(117, 117, 117, 0.5);
-    font-family: 'Roboto';
-font-style: normal;
-font-weight: 400;
-font-size: 12px;
-line-height: calc(14/12);
-letter-spacing: 0.01em;
-}
+
 
 
 .checkbox-item {
@@ -92,18 +98,12 @@ letter-spacing: 0.01em;
 
 
 
-&:focus + .icon-contact {
-    fill: var(--accent-color);
-}
 
 
 
 
 
-.icon-close:hover,
-.icon-close:focus {
-fill: var(--accent-color);
-}
+
 
 .policy-text {
     color: var(--accent-color);
@@ -152,7 +152,17 @@ margin-left: 7px;
         clip-path: inset(100%);
         clip: rect(0 0 0 0);
         overflow: hidden;
-        
+
+        &:checked + .icon {
+            background-color: var(--accent-color);
+            background-image: url(../images/icon-check.svg);
+            background-size: 72%;
+            background-repeat: no-repeat;
+           background-origin: border-box;
+           border-color: #2196F3;
+           background-position: center;
+           
+        }
 }
 
 
@@ -163,17 +173,5 @@ margin-left: 7px;
     height: 15px;
     border-radius: 2px;
     border: 1px solid var(--title-text-color);
-    
-}
-
-.checkbox:checked + .icon {
-    background-color: var(--accent-color);
-    background-image: url(../images/icon-check.svg);
-    background-size: 72%;
-    background-repeat: no-repeat;
-   background-origin: border-box;
-   border-color: #2196F3;
-   background-position: center;
-   
     
 }

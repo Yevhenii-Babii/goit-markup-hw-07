@@ -43,6 +43,10 @@
 }
 
 
+
+
+
+
 .submit-button {
     margin: 0 auto;
     margin-top: 30px;
@@ -164,7 +168,10 @@ transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
    
 &:hover,
 &:focus {
-    background-color: var(--accent-color);
+    background-color: var(--accent-color); 
+     .thumb {
+        fill: var(--primary-white-color);
+    }
     
 }
 
@@ -180,13 +187,11 @@ transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
        fill: var(--primary-white-color);
    }
    
-   }
-   
+
+}
+
 
    
   
    
-   &:hover .thumb,
-   &:focus .thumb {
-       fill: var(--primary-white-color);
-   }
+ 

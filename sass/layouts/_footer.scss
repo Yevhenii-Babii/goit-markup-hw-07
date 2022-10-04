@@ -23,11 +23,12 @@
 
 .footer__item {
     margin-right: 70px;
+    &:first-child {
+        margin-left: 0px;
+    }
 }
 
-.footer__item:first-child {
-    margin-left: 0px;
-}
+
 
 
 .contact {
@@ -100,24 +101,22 @@ margin-bottom: 20px;
 transition-property: background-color;
 transition-duration: 250ms;
 transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    
-} 
+   
+&:hover,
+&:focus {
+    background-color: var(--accent-color);
+}
 
-.footer__pic:first-child {
+&:first-child {
     margin-left: 0px;
 }
+} 
+
+
 
 .footer__icon {
     fill: var(--primary-white-color);
 }
-
-
-.footer__pic:hover,
-.footer__pic:focus {
-    background-color: var(--accent-color);
-}
-
-
 
 
 .footer__wrap {
